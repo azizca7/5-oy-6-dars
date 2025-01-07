@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5-oy 6-dars</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Forma asosida dinamik jadval yaratish -->
+    <h2>1. Forma asosida dinamik jadval yaratish</h2>
+    <form id="userForm">
+      <input type="text" id="ism" placeholder="Ism" />
+      <input type="text" id="familiya" placeholder="Familiya" />
+      <input type="email" id="email" placeholder="Email" />
+      <button type="submit">Qo'shish</button>
+    </form>
+
+    <h2>Ma'lumotlar jadvali</h2>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Ism</th>
+          <th>Familiya</th>
+          <th>Email</th>
+          <th>Amallar</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- 2. Rang tanlash paneli va jonli ko‘rinish -->
+    <h2>2. Rang tanlash paneli va jonli ko‘rinish</h2>
+    <form id="colorForm">
+      <input type="color" id="colorPicker" />
+      <input type="text" id="textInput" placeholder="Matn kiriting..." />
+      <div
+        id="newDiv"
+        style="padding: 20px; border: 1px solid black; margin-top: 10px"
+      ></div>
+    </form>
+
+    <!-- 3. To‘ldirilmagan maydonlarni belgilash -->
+    <h2>3. To‘ldirilmagan maydonlarni belgilash</h2>
+
+    <form id="designationForm">
+      <input
+        type="text"
+        class="input"
+        id="firstNmae"
+        placeholder="Ismingizni kiriting..."
+        style="margin-bottom: 10px"
+      /><br />
+      <input
+        type="text"
+        class="input"
+        id="lastName"
+        placeholder="Familiyangizni kiriting..."
+        style="margin-bottom: 10px"
+      /><br />
+      <input
+        type="age"
+        class="input"
+        id="age"
+        placeholder="Yoshingizni kiriting..."
+        style="margin-bottom: 10px"
+      /><br />
+      <input
+        type="email"
+        class="input"
+        id="email"
+        placeholder="Emailingizni kiriting..."
+        style="margin-bottom: 10px"
+      /><br />
+      <input
+        type="password"
+        class="input"
+        id="password"
+        placeholder="Parolni kiriting..."
+      />
+      <button type="submit" id="yuborish">Yuborish</button>
+    </form>
+
+    <!-- 4. Qidiruv natijalarini dinamik ko‘rsatish -->
+    <h2>4. Qidiruv natijalarini dinamik ko‘rsatish</h2>
+    <form id="searchForm">
+      <input type="search" id="search" />
+      <table id="datatable">
+        <tbody>
+          <tr>
+            <td>Ali</td>
+          </tr>
+          <tr>
+            <td>Vali</td>
+          </tr>
+          <tr>
+            <td>Hasan</td>
+          </tr>
+          <tr>
+            <td>Murod</td>
+          </tr>
+          <tr>
+            <td>Begzod</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <!-- 5. Dynamic Element Yaratish -->
+    <h2>5. Dynamic Element Yaratish</h2>
+
+    <form id="createForm">
+      <label>Element turi:</label>
+      <input type="text" id="elementType" placeholder="Masalan, div, p, h1" />
+
+      <label>Element ichidagi so'z:</label>
+      <input type="text" id="elementText" placeholder="Matn kiriting" />
+
+      <button type="submit">Yaratish</button>
+    </form>
+
+    <div id="resultContainer"></div>
+
+    <!-- 7. Interaktiv ishlar ro‘yxati (To-Do List) -->
+    <h2>7. Interaktiv ishlar ro‘yxati (To-Do List)</h2>
+
+    <form id="todoForm">
+      <input type="text" id="todoInput" placeholder="Yangi ish kiriting..." />
+      <button type="submit">Qo‘shish</button>
+      <ul id="todoList" class="todo-list"></ul>
+    </form>
+
+    <!-- 8. Shaxsiylashtirilgan salomlashuv yaratish -->
+    <h2>8. Shaxsiylashtirilgan salomlashuv yaratish</h2>
+
+    <form id="salomlashuvForm">
+      <input type="text" id="name" placeholder="Ismingizni kiriting..." />
+      <br /><br />
+
+      <label>Jinsingizni tanlang:</label>
+      <select id="jins">
+        <option value="erkak">Erkak</option>
+        <option value="ayol">Ayol</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Salomlashish</button>
+    </form>
+
+    <p id="salomText"></p>
+
+    <!-- 9. Jonli hisoblagich -->
+    <h2>9. Jonli hisoblagich</h2>
+
+    <form id="hisobForm">
+      <label>1-son:</label>
+      <input type="number" id="num1" />
+
+      <label>2-son:</label>
+      <input type="number" id="num2" />
+
+      <label>Operatsiya tanlang:</label>
+      <select id="operatsiya">
+        <option value="qoshish">Qo'shish (+)</option>
+        <option value="ayirish">Ayirish (-)</option>
+        <option value="kopaytirish">Ko'paytirish (*)</option>
+        <option value="bolish">Bo'lish (/)</option>
+      </select>
+
+      <p id="natija">Natija:</p>
+    </form>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
