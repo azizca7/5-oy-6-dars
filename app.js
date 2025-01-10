@@ -14,16 +14,13 @@ form1 &&
       return;
     }
 
-    const table = document
-      .getElementById("dataTable")
-      .getElementsByTagName("tbody")[0];
-    const newRow = table.insertRow();
-
-    newRow.innerHTML = `
-                <td>${ism}</td>
-                <td>${familiya}</td>
-                <td>${email}</td>
-                <td><button onclick="deleteRow(this)">O'chirish</button></td>
+    document.querySelector("#dataTable tbody").innerHTML += `
+                <tr>
+                    <td>${ism}</td>
+                    <td>${familiya}</td>
+                    <td>${email}</td>
+                    <td><button onclick="deleteRow(this)">O'chirish</button></td>
+                </tr>
             `;
   });
 
@@ -188,8 +185,8 @@ const form9 = document.getElementById("hisobForm");
 form9.addEventListener("input", function (event) {
   event.preventDefault();
 
-  let num1 = parseFloat(document.getElementById("num1").value) || 0;
-  let num2 = parseFloat(document.getElementById("num2").value) || 0;
+  let num1 = Math.trunc(document.getElementById("num1").value);
+  let num2 = Math.trunc(document.getElementById("num2").value);
   let operatsiya = document.getElementById("operatsiya").value;
   let natija = 0;
 
